@@ -3,8 +3,8 @@ import time
 from io import BytesIO
 
 def compare_pages_with_annotations(file1, file2):
-    doc1 = fitz.open(file1)
-    doc2 = fitz.open(file2)
+    doc1 = fitz.open(file1.read())
+    doc2 = fitz.open(file2.read())
 
     for k in range(len(doc1)):
         page1=doc1[k]
